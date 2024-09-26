@@ -2,6 +2,7 @@ package com.seerbit.seerbit.assessment.algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class AlgorithmSolutions {
@@ -12,7 +13,7 @@ public class AlgorithmSolutions {
         }
 
         // Sort the intervals by the start time
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 
         List<int[]> mergedIntervals = new ArrayList<>();
         int[] currentInterval = intervals[0]; // Initialize with the first interval
