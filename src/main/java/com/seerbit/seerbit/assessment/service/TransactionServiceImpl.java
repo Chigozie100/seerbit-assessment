@@ -17,7 +17,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Service
 public class TransactionServiceImpl implements TransactionService {
 
-    private static final int INTERVAL = 3000;
+    private static final int INTERVAL = 30;
     private final LinkedList<Transaction> transactions = new LinkedList<>();
     private final ReentrantLock lock = new ReentrantLock();
 
